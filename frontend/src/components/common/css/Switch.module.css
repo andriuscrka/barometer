@@ -1,0 +1,52 @@
+.switch {
+    position: relative;
+    display: inline-block;
+
+    width: 50px;
+    height: 25px;
+    margin: 0 10px;
+
+    background-color: #ccc;
+
+    outline: none;
+    border-radius: 25px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+    
+    left: 0;
+
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.switch:checked {
+    background-color: #2ecc71;
+
+    transition: background-color 0.4s ease-in;
+}
+
+.switch:not(:checked) {
+    background-color: #ccc;
+    
+    transition: none;
+}
+
+.switch:checked::after {
+    left: 50px;
+}
+
+.switch:checked::before {
+    left: 25px;
+}

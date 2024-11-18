@@ -1,0 +1,66 @@
+.container {
+    min-height: 100vh;
+    padding-block: 50px;
+}
+
+.switch-container {
+    min-width: 350px;
+    max-width: 720px;
+
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+    background-color: whitesmoke;
+    box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.barometers {
+    display: flex;
+}
+
+.barometers > div {
+    margin-inline: 10px;
+}
+
+.placeholder {
+    width: 350px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow:  0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+    background-color: #eee;
+}
+
+@media screen and (max-width: 768px) {
+    .switch-container {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .barometers {
+        flex-direction: column;
+    }
+
+    .barometers > div {
+        margin: 10px 0;
+    }
+
+    .placeholder {
+        width: 100%;
+        height: 270px;
+    }
+}

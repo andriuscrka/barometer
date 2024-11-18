@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+    backend:
+        container_name: barometer-app-backend
+        build:
+            context: backend/
+        ports:
+            - '3000:3000'
+
+    frontend:
+        container_name: barometer-app-frontend
+        build:
+            context: frontend/
+        environment:
+            - REACT_APP_API_ENDPOINT=backend:3000
+        ports:
+            - '8080:8080'
